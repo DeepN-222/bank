@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="light-mode">
+    <div class="theme-toggle">
+        <button id="themeToggle"><i class="fas fa-moon"></i></button>
+    </div>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="index.html">Home</a> > Credit Cards
+        </nav>
+        <br>
+        <div class="service-detail">
+            <header class="service-header">
+                <i class="fas fa-credit-card"></i>
+                <h1>Credit Cards</h1>
+            </header>
+
+            <div class="cards-grid">
+                <div class="credit-card">
+                    <div class="card-image">
+                        <img src="./common.jpg" alt="Basic Credit Card" >
+                    </div>
+                    <h3>Basic Rewards Card</h3>
+                    <div class="card-features">
+                        <p class="highlight">1% cashback on all purchases</p>
+                        <ul>
+                            <li>No annual fee</li>
+                            <li>Welcome bonus: ₹1,000</li>
+                            <li>Fuel surcharge waiver</li>
+                            <li>Movie ticket discounts</li>
+                        </ul>
+                    </div>
+                    <button class="apply-btn">Apply Now</button>
+                </div>
+
+                <div class="credit-card premium">
+                    <div class="card-image">
+                        <img src="./pre.jpg" alt="Premium Credit Card" >
+                    </div>
+                    <h3>Premium Travel Card</h3>
+                    <div class="card-features">
+                        <p class="highlight">4X reward points on travel</p>
+                        <ul>
+                            <li>Airport lounge access</li>
+                            <li>Welcome bonus: ₹5,000</li>
+                            <li>Travel insurance included</li>
+                            <li>Concierge services</li>
+                        </ul>
+                    </div>
+                    <button class="apply-btn">Apply Now</button>
+                </div>
+
+                <div class="credit-card business">
+                    <div class="card-image">
+                        <img src="./bus.png" alt="Business Credit Card" >
+                    </div>
+                    <h3>Business Card</h3>
+                    <div class="card-features">
+                        <p class="highlight">2% cashback on business expenses</p>
+                        <ul>
+                            <li>Expense management tools</li>
+                            <li>Welcome bonus: ₹10,000</li>
+                            <li>Multiple employee cards</li>
+                            <li>GST benefits</li>
+                        </ul>
+                    </div>
+                    <button class="apply-btn">Apply Now</button>
+                </div>
+            </div>
+
+            <div class="rewards-calculator">
+                <h2>Rewards Calculator</h2>
+                <div class="calculator-form">
+                    <div class="input-group">
+                        <label>Monthly Spend</label>
+                        <input type="number" id="monthlySpend" placeholder="Enter amount">
+                    </div>
+                    <div class="input-group">
+                        <label>Card Type</label>
+                        <select id="cardType">
+                            <option value="basic">Basic Rewards Card</option>
+                            <option value="premium">Premium Travel Card</option>
+                            <option value="business">Business Card</option>
+                        </select>
+                    </div>
+                    <button onclick="calculateRewards()">Calculate Rewards</button>
+                    <div id="rewardsResult" class="result-display"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Banking Interface</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="light-mode">
+    <div class="theme-toggle">
+        <button id="themeToggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <div id="loginPage" class="container">
+        <div class="login-form">
+            <h2>Welcome to ModernBank</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <div id="dashboard" class="container hidden">
+        <nav class="sidebar">
+            <div class="user-profile">
+                <img src="./vector-users-icon.jpg" alt="User" height="50px" width="50px"  width="50px"    >
+                <span>Welcome, User</span>
+            </div>
+            <ul>
+                <li class="active"><i class="fas fa-home"></i> Dashboard</li>
+                <li><i class="fas fa-calculator"></i> EMI Calculator</li>
+                <li><i class="fas fa-exchange-alt"></i> Currency Converter</li>
+                <li><i class="fas fa-info-circle"></i> Banking Services</li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <div class="dashboard-section">
+                <div class="balance-card">
+                    <h3>Current Balance</h3>
+                    <h2>$45,678.90</h2>
+                </div>
+
+                <div class="transactions">
+                    <h3>Recent Transactions</h3>
+                    <div class="transaction-list">
+                        <!-- Transactions will be populated by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="emi-calculator hidden">
+                <h3>Loan EMI Calculator</h3>
+                <input type="number" id="loanAmount" placeholder="Loan Amount">
+                <input type="number" id="interestRate" placeholder="Interest Rate (%)">
+                <input type="number" id="loanTenure" placeholder="Loan Tenure (months)">
+                <button onclick="calculateEMI()">Calculate EMI</button>
+                <div id="emiResult"></div>
+            </div>
+
+            <div class="currency-converter hidden">
+                <h3>Currency Converter</h3>
+                <div class="converter-wrapper">
+                    <form>
+                        <div class="amount">
+                            <p>Enter Amount</p>
+                            <input type="text" value="1">
+                        </div>
+                        <div class="drop-list">
+                            <div class="from">
+                                <p>From</p>
+                                <div class="select-box">
+                                    <img src="https://flagcdn.com/48x36/us.png" alt="flag">
+                                    <select></select>
+                                </div>
+                            </div>
+                            <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+                            <div class="to">
+                                <p>To</p>
+                                <div class="select-box">
+                                    <img src="https://flagcdn.com/48x36/eu.png" alt="flag">
+                                    <select></select>
+                                </div>
+                            </div>
+                        </div>
+                        <button>Get Exchange Rate</button>
+                        <div class="exchange-rate">Getting exchange rate...</div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="banking-services hidden">
+                <h3>Our Banking Services</h3>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <a href="savings-account.html" target="_main">
+                        <i class="fas fa-piggy-bank"></i>
+                        <h4>Savings Account</h4>
+                        <p>High-interest savings accounts with zero maintenance fees</p>
+                        </a>
+                    </div>
+                    <div class="service-card">
+                        <a href="loans.html" target="_main">
+                        <i class="fas fa-home"></i>
+                        <h4>Loans</h4>
+                        <p>Competitive interest rates starting from 3.5% p.a.</p>
+                        </a>
+                    </div>
+                    <div class="service-card">
+                        <a href="credit-cards.html" target="_main" >
+                        <i class="fas fa-credit-card"></i>
+                        <h4>Credit Cards</h4>
+                        <p>Rewards and cashback on every purchase</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
